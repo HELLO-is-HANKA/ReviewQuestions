@@ -1,0 +1,177 @@
+//
+//  main.c
+//  C
+//
+//  Created by Han Kang on 2023/05/03.
+//
+/* 这是个什么程序 我也不知道
+#include <stdio.h>
+#include <string.h>
+ 
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    float weight,volume;
+    int size,letter;
+    char name[40];
+    printf("hi,what`s your first name?\n");
+    scanf("%s",name);
+    printf("%s,what is your weight in pounds?\n",name);
+    scanf("%f",&weight);
+    size = sizeof name;
+    letter = (int)strlen(name);
+    volume = weight / DENSITY;
+    printf("well,%s your volume is %2.2f cubic feet.\n",name,volume);
+    printf("also,your first name has %d letter,\n",letter);
+    printf("and we have %d bytes to store it.\n",size);
+    printf("Hello, World!\n");
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+
+int main(void){
+    float inch,cm;
+    printf("请输入英寸值：");
+    scanf("%f",&inch);
+    cm = inch * 2.54;
+    printf("%.2f 英寸 = %.2f 厘米\n",inch,cm);
+    return 0;
+}
+*/
+//2.11复习题
+//使用#include "stdio.h"时，编译器首先在当前目录下搜索该文件，如果找不到，则在编译器指定的目录中搜索。
+//而使用#include <stdio.h>时，编译器则在系统指定的标准目录中搜索该文件。因此，一般来说，使用尖括号 <> 的形式表示包含的是系统头文件，而使用双引号 "" 的形式表示包含的是自己定义的头文件。
+/*
+#include "stdio.h"
+
+int main(void){
+    int s;
+    s=52;
+    printf("There are %d weeks in a year.\n",s);
+    return 0;
+}
+
+
+#include "stdio.h"
+int main(void){
+    printf("han kang\n");
+    printf("han\nkang\n");
+    printf("han ");
+    printf("kang\n");
+    return 0;
+}
+
+#include "stdio.h"
+int main(void){
+    int age,days,years;
+    age = 28;
+    years = 365;
+    
+    printf("My age is %d ,and it is %d days.\n",age,days=age*years);
+    return 0;
+}
+ 
+#include "stdio.h"
+int jolly(void){
+    printf("for he`s a jolly good fellow!\n");
+    return 0;
+}
+int deny(void){
+    printf("Which nobody can deny!\n");
+    return 0;
+}
+
+int main(void){
+    jolly();
+    jolly();
+    jolly();
+    deny();
+    return 0;
+}
+这里用到了指针，虽然我还不懂
+#include "stdio.h"
+const char* br(void);
+const char* ic(void);
+int main(void){
+    printf("%s,%s\n",br(),ic());
+    printf("%s\n",ic());
+    printf("%s\n",br());
+    return 0;
+    
+}
+const char* br(void){
+    return "Brazil,Russia";
+}
+const char* ic(void){
+    return "India,China";
+}
+用普通方法。
+#include "stdio.h"
+int br(void){
+    printf("B,R");
+    return 0;
+}
+int ic(void){
+    printf("I,C");
+    return 0;
+}
+int main(void){
+    br();
+    printf(",");
+    ic();
+    printf("\n");
+    ic();
+    printf(",\n");
+    br();
+    printf("\n");
+    return 0;
+}Square Cubic
+
+#include "stdio.h"
+#define toes 10
+
+int main(void){
+    printf("toes`s square is %d.\ntoes`s cubic is %d.\n",
+           toes*toes,toes*toes*toes);
+    return 0;
+}
+ */
+/* 这是个错误回答
+#include <stdio.h>
+void one_three(void);
+void two(void);
+int main(void){
+    printf("starting now:\n");
+    one_three();
+    printf("\ntwo\n");
+    two();
+    printf("\n");
+    printf("done!\n");
+    return 0;
+}
+void one_three(void){
+    printf("one");
+}
+void two(void){
+    printf("three");
+}
+、
+//正确如下
+#include <stdio.h>
+void two(void);
+void one_three(void){
+    printf("one\n");
+    two();
+    printf("\nthree\n");
+}
+void two(void){
+    printf("two");
+}
+int main(void){
+    printf("starting now:\n");
+    one_three();
+    printf("done\n");
+    return 0;
+}
+*/
